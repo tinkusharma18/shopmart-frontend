@@ -108,7 +108,7 @@ export default function AdminUserUpdatePage() {
                                     <label>Role</label>
                                     <select name="role" value={data.role} onChange={getInputData} className='form-select border-primary'>
                                         <option value="Admin">Admin</option>
-                                        <option value="Super Admin">Super Admin</option>
+                                        <option value="SuperAdmin">SuperAdmin</option>
                                     </select>
                                 </div>
 

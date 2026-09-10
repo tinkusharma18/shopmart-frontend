@@ -141,7 +141,7 @@ export default function App() {
             <Route path='/admin/checkout' element={<AdminCheckoutPage />} />
             <Route path='/admin/checkout/show/:_id' element={<AdminCheckoutShowPage />} />
 
-            {localStorage.getItem("role") === "Super Admin" ?
+            {localStorage.getItem("role") === "SuperAdmin" ?
               <>
                 <Route path='/admin/user' element={<AdminUserPage />} />
                 <Route path='/admin/user/create' element={<AdminUserCreatePage />} />

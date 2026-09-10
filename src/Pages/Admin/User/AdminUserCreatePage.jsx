@@ -16,7 +16,7 @@ export default function AdminUserCreatePage() {
         email: '',
         password: '',
         cpassword: '',
-        role:"Admin"
+        role: "Admin"
     })
     let [errorMessage, setErrorMessage] = useState({
         name: "Full Name Field is Mendatory",
@@ -134,7 +134,7 @@ export default function AdminUserCreatePage() {
                                     <label>Role</label>
                                     <select name="role" onChange={getInputData} className='form-select border-primary'>
                                         <option value="Admin">Admin</option>
-                                        <option value="Super Admin">Super Admin</option>
+                                        <option value="SuperAdmin">SuperAdmin</option>
                                     </select>
                                 </div>
 
