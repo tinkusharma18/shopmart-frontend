@@ -27,7 +27,6 @@ export default function ForgetPasswordPage3() {
             method: "POST",
             headers: {
                 "content-type": "application/json",
-                "authorization": import.meta.env.VITE_APP_PUBLIC_TOKEN
             },
             body: JSON.stringify({
                 username: localStorage.getItem("forget-password-username"),
@@ -60,7 +59,6 @@ export default function ForgetPasswordPage3() {
                                 <label>Confirm Password*</label>
                                 <input type="password" name="cpassword" onChange={getInputData} placeholder='Confirm New Password' className={`form-control ${show ? 'border-danger' : 'border-primary'}`} />
                             </div>
-
                             <div className="col-12 mb-3">
                                 <button type="submit" className='btn btn-primary w-100'>Reset Password</button>
                             </div>

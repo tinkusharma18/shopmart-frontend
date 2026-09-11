@@ -21,7 +21,6 @@ export default function ForgetPasswordPage1() {
             method: "POST",
             headers: {
                 "content-type": "application/json",
-                "authorization": import.meta.env.VITE_APP_PUBLIC_TOKEN
             },
             body: JSON.stringify({
                 username: data.username
@@ -49,7 +48,6 @@ export default function ForgetPasswordPage1() {
                                 <input type="text" name="username" onChange={getInputData} placeholder='Username' className={`form-control ${show ? 'border-danger' : 'border-primary'}`} />
                                 {show ? <p className='text-danger'>{errorMessage}</p> : null}
                             </div>
-
                             <div className="col-12 mb-3">
                                 <button type="submit" className='btn btn-primary w-100'>Send OTP</button>
                             </div>

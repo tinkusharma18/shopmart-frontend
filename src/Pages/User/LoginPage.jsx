@@ -23,7 +23,6 @@ export default function LoginPage() {
             method: "POST",
             headers: {
                 "content-type": "application/json",
-                "authorization": import.meta.env.VITE_APP_PUBLIC_TOKEN
             },
             body: JSON.stringify({
                 username: data.username,
@@ -51,36 +50,6 @@ export default function LoginPage() {
             setErrorMessage(response.reason)
             setShow(true)
         }
-
-
-        // let response = await fetch(`${import.meta.env.VITE_APP_BACKEND_SERVER}/user`, {
-        //     method: "GET",
-        //     headers: {
-        //         "content-type": "application/json"
-        //     }
-        // })
-        // response = await response.json()
-        // let item = response.find(x => (x.username === data.username || x.email === data.username) && x.password === data.password)
-        // if (item) {
-        //     if (item.status === false) {
-        //         setErrorMessage("Your Account Has Been Blocked Due to Some Anauthorized Activity, Please Contact Us to Resume Your Account")
-        //         setShow(true)
-        //     }
-        //     else {
-        //         localStorage.setItem('login', true)
-        //         localStorage.setItem('userid', item._id)
-        //         localStorage.setItem('name', item.name)
-        //         localStorage.setItem('role', item.role)
-        //         if (item.role === "Buyer")
-        //             navigate("/profile")
-        //         else
-        //             navigate("/admin")
-        //     }
-        // }
-        // else {
-        //     setErrorMessage("Invalid Username or Password")
-        //     setShow(true)
-        // }
     }
     return (
         <div className='container my-3'>
@@ -94,7 +63,6 @@ export default function LoginPage() {
                                 <input type="text" name="username" onChange={getInputData} placeholder='Username' className={`form-control ${show ? 'border-danger' : 'border-primary'}`} />
                                 {show ? <p className='text-danger'>{errorMessage}</p> : null}
                             </div>
-
                             <div className="col-12 mb-3">
                                 <label className='d-block'>Password*</label>
                                 <div className='btn-group w-100'>
@@ -102,7 +70,6 @@ export default function LoginPage() {
                                     <button type='button' className='btn border border-primary' onClick={() => setShowPassword(!showPassword)}><i className={`${showPassword ? 'bi bi-eye-slash' : 'bi bi-eye'}`}></i></button>
                                 </div>
                             </div>
-
                             <div className="col-12 mb-3">
                                 <button type="submit" className='btn btn-primary w-100'>Login</button>
                             </div>

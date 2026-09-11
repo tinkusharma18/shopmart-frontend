@@ -46,28 +46,10 @@ export default function SignupPage() {
             return
         }
 
-        //Remove Following Lines in Case of Real Backend
-        // let response = await fetch(`${import.meta.env.VITE_APP_BACKEND_SERVER}/user`)
-        // response = await response.json()
-
-
-        // item = response.find(x => x.username?.toLocaleLowerCase() === data.username?.toLocaleLowerCase() || x.email?.toLocaleLowerCase() === data.email?.toLocaleLowerCase())
-        // if (item) {
-        //     setErrorMessage({
-        //         ...errorMessage,
-        //         username: item.username?.toLocaleLowerCase() === data.username?.toLocaleLowerCase() ? "Username Already Taken" : "",
-        //         email: item.email?.toLocaleLowerCase() === data.email?.toLocaleLowerCase() ? "Email Address Already Taken" : "",
-        //     })
-        //     setShow(true)
-        //     return
-        // }
-        // Till This Line
-
         let response = await fetch(`${import.meta.env.VITE_APP_BACKEND_SERVER}/user`, {
             method: "POST",
             headers: {
                 "content-type": "application/json",
-                "authorization": import.meta.env.VITE_APP_PUBLIC_TOKEN
             },
             body: JSON.stringify({
                 name: data.name,
@@ -99,25 +81,21 @@ export default function SignupPage() {
                                 <input type="text" name="name" onChange={getInputData} placeholder='Full Name' className={`form-control ${show && errorMessage.name ? 'border-danger' : 'border-primary'}`} />
                                 {show && errorMessage.name ? <p className='text-danger'>{errorMessage.name}</p> : null}
                             </div>
-
                             <div className="col-lg-6 mb-3">
                                 <label>Phone Number*</label>
                                 <input type="text" name="phone" onChange={getInputData} placeholder='Phone Number' className={`form-control ${show && errorMessage.phone ? 'border-danger' : 'border-primary'}`} />
                                 {show && errorMessage.phone ? <p className='text-danger'>{errorMessage.phone}</p> : null}
                             </div>
-
                             <div className="col-lg-6 mb-3">
                                 <label>Username*</label>
                                 <input type="text" name="username" onChange={getInputData} placeholder='Username' className={`form-control ${show && errorMessage.username ? 'border-danger' : 'border-primary'}`} />
                                 {show && errorMessage.username ? <p className='text-danger'>{errorMessage.username}</p> : null}
                             </div>
-
                             <div className="col-lg-6 mb-3">
                                 <label>Email Address*</label>
                                 <input type="email" name="email" onChange={getInputData} placeholder='Email Address' className={`form-control ${show && errorMessage.email ? 'border-danger' : 'border-primary'}`} />
                                 {show && errorMessage.email ? <p className='text-danger'>{errorMessage.email}</p> : null}
                             </div>
-
                             <div className="col-lg-6 mb-3">
                                 <label className='d-block'>Password*</label>
                                 <div className='btn-group w-100'>
@@ -128,12 +106,10 @@ export default function SignupPage() {
                                     return <p className='text-danger' key={index}>{item}</p>
                                 }) : null}
                             </div>
-
                             <div className="col-lg-6 mb-3">
                                 <label>Confirm Password*</label>
                                 <input type="password" name="cpassword" onChange={getInputData} placeholder='Confirm Password' className={`form-control ${show && errorMessage.password ? 'border-danger' : 'border-primary'}`} />
                             </div>
-
                             <div className="col-12 mb-3">
                                 <button type="submit" className='btn btn-primary w-100'>Signup</button>
                             </div>

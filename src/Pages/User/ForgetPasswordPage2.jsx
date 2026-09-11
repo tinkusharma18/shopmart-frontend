@@ -21,7 +21,6 @@ export default function ForgetPasswordPage2() {
             method: "POST",
             headers: {
                 "content-type": "application/json",
-                "authorization": import.meta.env.VITE_APP_PUBLIC_TOKEN
             },
             body: JSON.stringify({
                 username: localStorage.getItem("forget-password-username"),
@@ -49,7 +48,6 @@ export default function ForgetPasswordPage2() {
                                 <input type="text" name="otp" onChange={getInputData} placeholder='Enter OTP Which is Sent On Your Registered Email Address' className={`form-control ${show ? 'border-danger' : 'border-primary'}`} />
                                 {show ? <p className='text-danger'>{errorMessage}</p> : null}
                             </div>
-
                             <div className="col-12 mb-3">
                                 <button type="submit" className='btn btn-primary w-100'>Submit OTP</button>
                             </div>
