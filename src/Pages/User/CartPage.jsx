@@ -92,8 +92,8 @@ export default function CartPage() {
                                         {data.map((item) => {
                                             return <tr key={item._id}>
                                                 <th scope="row">
-                                                    <Link to={`${import.meta.env.VITE_APP_IMAGE_SERVER}${item.product?.pic[0]}`} target='_blank'>
-                                                        <img src={`${import.meta.env.VITE_APP_IMAGE_SERVER}${item.product?.pic[0]}`} height={70} width={70} alt="" />
+                                                    <Link to={`${import.meta.env.VITE_APP_IMAGE_SERVER}/${item.product?.pic[0]}`} target='_blank'>
+                                                        <img src={`${import.meta.env.VITE_APP_IMAGE_SERVER}/${item.product?.pic[0]}`} height={70} width={70} alt="" />
                                                     </Link>
                                                 </th>
                                                 <th scope="row"><p className="mb-0 py-4">{item.product?.name}</p></th>

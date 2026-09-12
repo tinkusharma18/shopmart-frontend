@@ -7,7 +7,7 @@ export default function SingleProduct({ item, title }) {
             <div className="product-item rounded wow fadeInUp" data-wow-delay="0.1s">
                 <div className="product-item-inner border rounded">
                     <div className="product-item-inner-item">
-                        <img src={`${import.meta.env.VITE_APP_IMAGE_SERVER}${item.pic[0]}`} style={{ height: 400 }} className="img-fluid w-100 rounded-top" alt="" />
+                        <img src={`${import.meta.env.VITE_APP_IMAGE_SERVER}/${item.pic[0]}`} style={{ height: 400 }} className="img-fluid w-100 rounded-top" alt="" />
                         <div className="product-new">{item.brand?.name}</div>
                         <div className="product-details">
                             <Link to={`/product/${item._id}`}><i className="fa fa-eye fa-1x"></i></Link>

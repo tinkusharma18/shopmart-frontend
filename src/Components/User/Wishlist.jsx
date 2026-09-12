@@ -46,8 +46,8 @@ export default function Wishlist() {
             {data.map(item => {
               return <tr key={item._id}>
                 <td>
-                  <Link to={`${import.meta.env.VITE_APP_IMAGE_SERVER}${item?.product?.pic[0]}`} target='_blank'>
-                    <img src={`${import.meta.env.VITE_APP_IMAGE_SERVER}${item?.product?.pic[0]}`} height={70} width={70} alt="" />
+                  <Link to={`${import.meta.env.VITE_APP_IMAGE_SERVER}/${item?.product?.pic[0]}`} target='_blank'>
+                    <img src={`${import.meta.env.VITE_APP_IMAGE_SERVER}/${item?.product?.pic[0]}`} height={70} width={70} alt="" />
                   </Link>
                 </td>
                 <td>{item?.product?.name}</td>

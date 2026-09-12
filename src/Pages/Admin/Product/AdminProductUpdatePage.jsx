@@ -279,7 +279,7 @@ export default function AdminProductUpdatePage() {
                                             return <img key={index} onClick={() => {
                                                 oldPics.splice(index, 1)
                                                 setFlag(!flag)
-                                            }} className='m-1' src={`${import.meta.env.VITE_APP_IMAGE_SERVER}${item}`} height={50} width={50} />
+                                            }} className='m-1' src={`${import.meta.env.VITE_APP_IMAGE_SERVER}/${item}`} height={50} width={50} />
                                         })}
                                     </div>
                                 </div>

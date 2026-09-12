@@ -163,7 +163,7 @@ export default function ProductPage() {
                                     <Swiper {...sliderOptions}>
                                         {data.pic.map((item, index) => {
                                             return <SwiperSlide key={index}>
-                                                <img src={`${import.meta.env.VITE_APP_IMAGE_SERVER}${item}`} height={400} className='w-100' />
+                                                <img src={`${import.meta.env.VITE_APP_IMAGE_SERVER}/${item}`} height={400} className='w-100' />
                                             </SwiperSlide>
                                         })}
                                     </Swiper>

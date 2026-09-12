@@ -8,7 +8,7 @@ export default function SingleProduct2({ item }) {
                 <div className="row g-0">
                     <div className="col-5">
                         <div className="products-mini-img border-end h-100">
-                            <img src={`${import.meta.env.VITE_APP_IMAGE_SERVER}${item.pic[0]}`} style={{ height: 180 }} className="img-fluid w-100" alt="Image" />
+                            <img src={`${import.meta.env.VITE_APP_IMAGE_SERVER}/${item.pic[0]}`} style={{ height: 180 }} className="img-fluid w-100" alt="Image" />
                             <div className="products-mini-icon rounded-circle bg-primary">
                                 <Link to={`/product/${item._id}`}><i className="fa fa-eye fa-1x text-white"></i></Link>
                             </div>

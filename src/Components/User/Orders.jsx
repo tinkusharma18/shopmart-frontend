@@ -155,8 +155,8 @@ export default function Orders() {
                   {item.products?.map(record => {
                     return <tr key={record._id}>
                       <td>
-                        <Link to={`${import.meta.env.VITE_APP_IMAGE_SERVER}${record?.product?.pic[0]}`} target='_blank'>
-                          <img src={`${import.meta.env.VITE_APP_IMAGE_SERVER}${record?.product?.pic[0]}`} height={70} width={70} alt="" />
+                        <Link to={`${import.meta.env.VITE_APP_IMAGE_SERVER}/${record?.product?.pic[0]}`} target='_blank'>
+                          <img src={`${import.meta.env.VITE_APP_IMAGE_SERVER}/${record?.product?.pic[0]}`} height={70} width={70} alt="" />
                         </Link>
                       </td>
                       <td>{record.product?.name}</td>

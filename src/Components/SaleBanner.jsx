@@ -23,7 +23,7 @@ export default function SaleBanner() {
                     <div className="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s">
                         <div>
                             <div className="bg-primary rounded position-relative">
-                                <img src={`${import.meta.env.VITE_APP_IMAGE_SERVER}${data.pic[0]}`} className="img-fluid w-100 rounded" alt="" />
+                                <img src={`${import.meta.env.VITE_APP_IMAGE_SERVER}/${data.pic[0]}`} className="img-fluid w-100 rounded" alt="" />
                                 <div className="position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center rounded p-4"
                                     style={{ background: "rgba(255, 255, 255, 0.5)" }}>
                                     <h3 className="display-5 text-primary">{data.name}</h3>
